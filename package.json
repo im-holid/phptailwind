@@ -1,0 +1,12 @@
+{
+  "name": "php",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "css-build": "tailwindcss build -i src/styles.css -o public/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
