@@ -1,10 +1,9 @@
 <?php
 
+use Core\AppContainer;
 use Core\Database;
 
-$config = require(base_path('config.php'));
-
-$db = new Database($config['database'], $config['user'], $config['password']);
+$db = AppContainer::resolve(Database::class);
 
 $currentUserId = 6;
 
@@ -13,4 +12,4 @@ $user = $db->fetchUser($currentUserId)->fetchOrFail();
 
 $heading = 'Posts';
 
-require base_path("views/posts/index.view.php");
+view('views/posts/index.view.php', ['heading' => 'Post', 'user' => $user, 'posts' => $posts]);

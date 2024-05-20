@@ -1,5 +1,3 @@
 <?php
 
-$heading = 'About';
-
-require base_path("views/about.view.php");
+view('views/about.view.php', ['heading' => 'About']);

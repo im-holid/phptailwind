@@ -3,7 +3,7 @@
 <?php require(base_path('views/partials/banner.php')) ?>
 <main>
     <div class="mx-auto max-w-7xl py-6 px-8">
-        <form method="post">
+        <form method="post" action="/posts">
 
             <div class="flex flex-col w-full gap-4">
 
