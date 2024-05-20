@@ -56,6 +56,14 @@ class Database
         return;
     }
 
+    public function updatePost($id, $body, $title)
+    {
+        $query = "UPDATE `php101`.`posts` SET `title` = :title , `body` = :body WHERE `id` = :id;";
+        $this->statement = $this->connection->prepare($query);
+        $this->statement->execute([":id" => $id, ":title" => $title, ":body" => $body]);
+        return;
+    }
+
     public function fetchUser($id)
     {
         $query = "select * from users where id = ?";

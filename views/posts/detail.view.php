@@ -16,11 +16,15 @@
                 Body : <?= htmlspecialchars($post['body']); ?>
             </p>
         </div>
-        <form method="post">
-            <input name="__method" value="DELETE" type="hidden" />
-            <input name="id" value="<?= $post['id'] ?>" type="hidden" />
-            <button class="px-8 py-3 rounded-full bg-blue-400 border-white border-2 text-white font-semibold uppercase hover:shadow-2xl transition-shadow duration-300">Delete</button>
-        </form>
+        <div class="flex items-center justify-between">
+
+            <form method="post">
+                <input name="__method" value="DELETE" type="hidden" />
+                <input name="id" value="<?= $post['id'] ?>" type="hidden" />
+                <button class="px-8 py-3 rounded-full bg-blue-400 border-white border-2 text-white font-semibold uppercase hover:shadow-2xl transition-shadow duration-300">Delete</button>
+            </form>
+            <a href="/post-edit?id=<?= $post['id'] ?>" class="px-8 py-3 rounded-full bg-blue-400 border-white border-2 text-white font-semibold uppercase hover:shadow-2xl transition-shadow duration-300">Edit</a>
+        </div>
     </div>
 </main>
 <?php require(base_path('views/partials/footer.php')) ?>

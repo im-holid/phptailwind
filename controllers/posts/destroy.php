@@ -1,12 +1,13 @@
 <?php
 
 use Core\AppContainer;
+use Core\ConstantClass;
 use Core\Database;
 use Core\Response;
 
 $db = AppContainer::resolve(Database::class);
 
-$currentUserId = 6;
+$currentUserId = ConstantClass::$currentUserId;
 
 $id = $_POST['id'];
 
@@ -19,4 +20,4 @@ $db->deletePost($id);
 
 header('location:/posts');
 
-exit();
+die();

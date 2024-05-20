@@ -31,6 +31,11 @@ class Router
         $this->add($uri, $controller, 'DELETE');
     }
 
+    public  function update($uri, $controller)
+    {
+        $this->add($uri, $controller, 'UPDATE');
+    }
+
     public  function put($uri, $controller)
     {
         $this->add($uri, $controller, 'PUT');
