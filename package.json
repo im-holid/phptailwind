@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "css-build": "tailwindcss build -i src/styles.css -o public/css/styles.css --watch"
+    "css-start": "tailwindcss build -i src/styles.css -o public/css/styles.css --watch",
+    "php-start": "php -S localhost:3030 -t public/",
+    "start": "tailwindcss build -i src/styles.css -o public/css/styles.css --watch && php -S localhost:3030 -t public/"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"

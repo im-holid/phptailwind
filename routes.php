@@ -12,3 +12,6 @@ $router->get('/post-edit', 'controllers/posts/edit.php');
 $router->post('/posts', 'controllers/posts/store.php');
 $router->update('/posts', 'controllers/posts/update.php');
 $router->delete('/post', 'controllers/posts/destroy.php');
+
+$router->get('/register', 'controllers/auth/register.php');
+$router->post('/register', 'controllers/auth/store.php');

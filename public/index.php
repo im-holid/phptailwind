@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 use Core\AppContainer;
 use Core\Container;
 use Core\Database;

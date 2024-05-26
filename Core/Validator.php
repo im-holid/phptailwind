@@ -15,4 +15,9 @@ class Validator
         $value = trim($value);
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
+    public static function checkWhiteSpace($value)
+    {
+        $check = preg_match('/\s/', $value);
+        return $check;
+    }
 }

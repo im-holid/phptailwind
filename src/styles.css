@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input {
+  @apply transition-colors duration-300 border border-transparent focus:border-blue-500 focus:outline-none;
+}

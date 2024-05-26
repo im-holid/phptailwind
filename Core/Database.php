@@ -115,4 +115,20 @@ class Database
         $this->statement->execute([":id" => $id,]);
         return;
     }
+
+    public function checkEmail($email)
+    {
+        $query = "SELECT * FROM `users` WHERE `email` = :email";
+        $this->statement = $this->connection->prepare($query);
+        $this->statement->execute([":email" => $email]);
+        return $this;
+    }
+
+    public function storeUser($name, $email, $password)
+    {
+        $query = "INSERT INTO `users` (`name`, `email`, `password`) VALUES (:name, :email, :password)";
+        $this->statement = $this->connection->prepare($query);
+        $this->statement->execute([":email" => $email, ':name' => $name, ':password' => $password]);
+        return;
+    }
 }

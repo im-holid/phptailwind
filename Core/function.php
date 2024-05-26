@@ -15,7 +15,6 @@ function classNav($var)
         return;
     }
     echo 'text-gray-300 hover:bg-gray-700 hover:text-white';
-    return;
 }
 
 function abort($code = 404)
